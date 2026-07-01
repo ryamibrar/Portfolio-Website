@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="g" cx="30%" cy="20%" r="70%"><stop offset="0" stop-color="#133cad"/><stop offset="0.45" stop-color="#0d111a"/><stop offset="1" stop-color="#07080c"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <g opacity="0.15" stroke="#fffaf2"><path d="M0 120h1200M0 240h1200M0 360h1200M0 480h1200M200 0v630M400 0v630M600 0v630M800 0v630M1000 0v630"/></g>
+  <text x="80" y="190" fill="#62b68c" font-family="Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="6">UX / VISUAL DESIGN / DIGITAL MARKETING</text>
+  <text x="80" y="330" fill="#fffaf2" font-family="Arial, sans-serif" font-size="92" font-weight="800">Ryam Ibrar</text>
+  <text x="80" y="430" fill="#fffaf2" opacity="0.85" font-family="Arial, sans-serif" font-size="54" font-weight="700">Designing clarity for complex ideas.</text>
+  <rect x="832" y="128" width="230" height="310" rx="28" fill="#fffaf2" opacity="0.9" transform="rotate(8 947 283)"/>
+  <rect x="760" y="220" width="250" height="250" rx="28" fill="#133cad" opacity="0.95" transform="rotate(-8 885 345)"/>
+  <rect x="930" y="260" width="180" height="240" rx="24" fill="#62b68c" opacity="0.9" transform="rotate(14 1020 380)"/>
+</svg>

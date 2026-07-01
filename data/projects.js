@@ -1,0 +1,98 @@
+window.featuredProjects = [
+  {
+    id: 'archaius-website-redesign',
+    eyebrow: 'UX + Web Design',
+    title: 'Archaius Website UX & Marketing Site Redesign',
+    deckTitle: 'Website UX & Marketing Site Redesign',
+    summary: 'Redesigned structure, hierarchy, and visual direction for a defense technology website so complex product and industry information became easier to explore.',
+    role: 'UX strategy, information architecture, wireframes, high-fidelity page concepts, visual hierarchy, responsive planning',
+    tools: ['Figma', 'Framer', 'Illustrator', 'SEO analytics'],
+    timeline: '2025–2026',
+    status: 'Public-facing / redacted detail',
+    impact: 'Improved content clarity, strengthened page hierarchy, and created a more cohesive user journey for technical and non-technical audiences.',
+    challenge: 'Archaius needed to communicate advanced defense technology in a way that felt credible, clear, and navigable for external audiences without overwhelming them with dense technical language.',
+    process: ['Audited existing pages and content flow', 'Mapped sitemap, navigation, and page relationships', 'Created wireframes and responsive page concepts', 'Refined hierarchy for solutions, industries, and company story', 'Translated technical concepts into clearer visual sections'],
+    solution: 'A modular website direction with stronger information architecture, intentional page hierarchy, clearer CTAs, and visual systems that help explain products and industries without revealing sensitive technical information.',
+    improvements: ['Clearer navigation paths', 'More strategic page sections', 'Stronger content grouping for technical audiences', 'Reusable design patterns for future pages'],
+    reflection: 'This project helped me understand how UX and brand communication overlap in technical industries. The strongest design decision was treating the website as a guided explanation rather than a static brochure.',
+    imageLabel: 'Sitemap / page hierarchy / responsive page mockups',
+    color: 'blue'
+  },
+  {
+    id: 'brand-visual-system',
+    eyebrow: 'Brand Systems',
+    title: 'Archaius Brand & Visual Communication System',
+    deckTitle: 'Brand & Visual Communication System',
+    summary: 'Built reusable visual standards and branded assets to help the company communicate consistently across web, print, presentations, and sales materials.',
+    role: 'Brand documentation, layout system, typography, color usage, reusable components, visual asset organization',
+    tools: ['Figma', 'Illustrator', 'InDesign', 'Photoshop'],
+    timeline: '2025–2026',
+    status: 'Internal-facing / approved visuals only',
+    impact: 'Created consistent visual standards that improved the quality and cohesion of marketing, sales, and presentation assets.',
+    challenge: 'The company needed a more consistent way to present itself across different formats while still leaving room for product-specific communication.',
+    process: ['Defined reusable layout logic', 'Organized typography and color usage', 'Created icon and diagram direction', 'Built document and presentation rules', 'Prepared assets for repeatable internal use'],
+    solution: 'A flexible communication system that translates the brand into practical templates, document rules, and visual components that can work across sales, web, and internal materials.',
+    improvements: ['Cleaner document standards', 'More consistent brand presence', 'Reusable layout components', 'Better handoff for future assets'],
+    reflection: 'This work showed me that brand design is not only about aesthetics. It is also about making decisions easier for a team and creating systems that scale.',
+    imageLabel: 'Brand book preview / typography / color / diagrams',
+    color: 'green'
+  },
+  {
+    id: 'one-pager-system',
+    eyebrow: 'Marketing Collateral',
+    title: 'Marketing Collateral & One-Pager Template System',
+    deckTitle: 'One-Pager Template System',
+    summary: 'Designed one-pager templates, product explainers, diagrams, and marketing layouts that translate complex defense technology concepts into clear visual stories.',
+    role: 'Layout design, print/digital collateral, product diagram organization, hierarchy, scannability, template system',
+    tools: ['InDesign', 'Illustrator', 'Figma', 'Photoshop'],
+    timeline: '2025–2026',
+    status: 'Public-facing / sensitive detail removed',
+    impact: 'Established a consistent collateral system for marketing and sales use, with stronger scannability and clearer visual hierarchy.',
+    challenge: 'Technical content needed to be simplified into polished one-page documents that could be understood quickly by busy stakeholders.',
+    process: ['Identified the most important message per sheet', 'Created repeatable grids and information zones', 'Balanced diagrams, callouts, and supporting text', 'Prepared layouts for print and digital review', 'Refined templates based on stakeholder feedback'],
+    solution: 'A one-pager system with clear sections, diagram-friendly layouts, strong callouts, and reusable hierarchy so different products and capabilities can be explained consistently.',
+    improvements: ['More readable technical content', 'Reusable print-ready layouts', 'Clearer product storytelling', 'Consistent sales enablement materials'],
+    reflection: 'The most important lesson was that good collateral is not just decorated information. It has to guide attention quickly and make the main message obvious.',
+    imageLabel: 'One-pagers / product explainers / technical diagram zones',
+    color: 'paper'
+  },
+  {
+    id: 'proposal-deck-assets',
+    eyebrow: 'Presentation Design',
+    title: 'Presentation, Proposal & Event Design Assets',
+    deckTitle: 'Presentation, Proposal & Event Assets',
+    summary: 'Created deck templates, proposal covers, company banners, and visual assets for external-facing communication.',
+    role: 'Presentation systems, proposal covers, event graphics, banner concepts, executive-facing design polish',
+    tools: ['PowerPoint', 'Illustrator', 'Photoshop', 'InDesign', 'After Effects'],
+    timeline: '2025–2026',
+    status: 'Approved visuals / redacted content',
+    impact: 'Helped external-facing communication feel more polished, consistent, and aligned with the company’s brand direction.',
+    challenge: 'Archaius needed polished visual assets for proposals, presentations, banners, and other moments where first impressions mattered.',
+    process: ['Created high-impact cover directions', 'Built reusable deck structure', 'Adapted brand visuals for event and proposal formats', 'Designed with print and screen use in mind', 'Refined for consistency across deliverables'],
+    solution: 'A polished set of presentation and proposal assets that use strong cover imagery, consistent typographic hierarchy, and flexible layouts for different communication needs.',
+    improvements: ['More professional proposal presentation', 'Consistent deck visuals', 'Scalable cover systems', 'Stronger first impression for external materials'],
+    reflection: 'This project reinforced how much presentation design shapes perception. A strong visual system can make technical content feel more credible before the audience reads a single paragraph.',
+    imageLabel: 'Deck covers / proposal covers / company banners',
+    color: 'violet'
+  }
+];
+
+window.archiveItems = [
+  { title: 'Defense Industry Page', category: 'Web Design', tool: 'Framer / Figma', purpose: 'A page structure for communicating defense use cases with clarity and restraint.' },
+  { title: 'Autonomy & Mobility Page', category: 'Web Design', tool: 'Framer / Figma', purpose: 'Responsive page concept for autonomy-focused audience storytelling.' },
+  { title: 'Logistics & Infrastructure Page', category: 'Web Design', tool: 'Framer / Figma', purpose: 'Exploratory page direction with a distinct resilience-focused visual system.' },
+  { title: 'Brand Guideline Spread', category: 'Branding', tool: 'InDesign', purpose: 'A concise system for colors, type, logos, and layout rules.' },
+  { title: 'Capability Statement', category: 'Marketing Collateral', tool: 'InDesign', purpose: 'A print-ready document designed for quick scanning and professional handoff.' },
+  { title: 'Product Diagram System', category: 'Marketing Collateral', tool: 'Illustrator', purpose: 'Visual diagrams simplifying technical product concepts.' },
+  { title: 'Sales Deck Template', category: 'Presentations', tool: 'PowerPoint / Figma', purpose: 'Reusable executive-facing presentation layouts.' },
+  { title: 'Proposal Cover Series', category: 'Proposal Design', tool: 'Illustrator / Photoshop', purpose: 'High-impact proposal covers with consistent brand language.' },
+  { title: 'Company Banner Concepts', category: 'Print Design', tool: 'Illustrator', purpose: 'Large-format branded visuals for company presence and events.' },
+  { title: 'LinkedIn Visual Assets', category: 'Motion / Social', tool: 'After Effects / Photoshop', purpose: 'Social graphics and animated content for external communication.' }
+];
+
+window.skills = {
+  'UX & Web': ['Sitemaps', 'Wireframes', 'Prototypes', 'Information architecture', 'Responsive design'],
+  'Visual Design': ['Typography', 'Layout', 'Branding', 'Iconography', 'Diagrams', 'Marketing collateral'],
+  'Marketing': ['SEO-informed improvements', 'Content clarity', 'Campaign visuals', 'Audience-focused assets'],
+  'Tools': ['Figma', 'Adobe Illustrator', 'Photoshop', 'InDesign', 'After Effects', 'Framer/Webflow', 'Blender', 'Unreal Engine']
+};
