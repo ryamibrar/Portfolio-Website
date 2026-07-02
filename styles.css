@@ -994,4 +994,9 @@ body.project-page {
 
 .image-card p {
   padding-bottom: 16px;
+} 
+/* TEMP FIX: make content visible even if JavaScript breaks */
+.reveal {
+  opacity: 1 !important;
+  transform: none !important;
 }
