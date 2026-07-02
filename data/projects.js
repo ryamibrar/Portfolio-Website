@@ -46,6 +46,8 @@ window.featuredProjects = [
     eyebrow: 'Marketing Collateral',
     title: 'Marketing Collateral & One-Pager Template System',
     deckTitle: 'One-Pager Template System',
+    image: 'assets/website-presentation-with-laptop-device.png',
+    imageAlt: 'One-pager template preview showing marketing collateral layouts',
     summary: 'Designed one-pager templates, product explainers, diagrams, and marketing layouts that translate complex defense technology concepts into clear visual stories.',
     role: 'Layout design, print/digital collateral, product diagram organization, hierarchy, scannability, template system',
     tools: ['InDesign', 'Illustrator', 'Figma', 'Photoshop'],
