@@ -25,6 +25,8 @@ window.featuredProjects = [
     eyebrow: 'Brand Systems',
     title: 'Archaius Brand & Visual Communication System',
     deckTitle: 'Brand & Visual Communication System',
+    image: 'assets/website-presentation-with-laptop-device.png',
+    imageAlt: 'Brand guidelines preview showing typography, color, and layout rules',
     summary: 'Built reusable visual standards and branded assets to help the company communicate consistently across web, print, presentations, and sales materials.',
     role: 'Brand documentation, layout system, typography, color usage, reusable components, visual asset organization',
     tools: ['Figma', 'Illustrator', 'InDesign', 'Photoshop'],
