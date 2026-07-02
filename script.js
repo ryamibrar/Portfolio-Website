@@ -2,22 +2,29 @@ const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 
 const caseVisual = (project) => `
-  <div class="case-visual ${project.color}" aria-label="Placeholder visual for ${project.title}">
-    <div class="visual-sheet large">
-      <div class="sheet-title"></div>
-      <div class="sheet-line" style="width: 88%"></div>
-      <div class="sheet-line" style="width: 72%"></div>
-      <div class="sheet-line" style="width: 64%"></div>
-      <div class="sheet-box"></div>
-    </div>
-    <div class="visual-sheet small dark">
-      <div class="sheet-title"></div>
-      <div class="sheet-line" style="width: 80%"></div>
-      <div class="sheet-line" style="width: 66%"></div>
-      <div class="sheet-box"></div>
-    </div>
-    <p class="visual-caption">${project.imageLabel}</p>
+  <div class="case-visual image-visual ${project.color || ""}" aria-label="${project.imageAlt || project.title}">
+    ${
+      project.image
+        ? `<img src="${project.image}" alt="${project.imageAlt || project.title}" loading="lazy" />`
+        : `
+          <div class="visual-sheet large">
+            <div class="sheet-title"></div>
+            <div class="sheet-line" style="width: 88%"></div>
+            <div class="sheet-line" style="width: 72%"></div>
+            <div class="sheet-line" style="width: 64%"></div>
+            <div class="sheet-box"></div>
+          </div>
+          <div class="visual-sheet small dark">
+            <div class="sheet-title"></div>
+            <div class="sheet-line" style="width: 80%"></div>
+            <div class="sheet-line" style="width: 66%"></div>
+            <div class="sheet-box"></div>
+          </div>
+        `
+    }
+    <p class="visual-caption">${project.imageLabel || "Selected project preview"}</p>
   </div>
+`;
 `;
 
 function renderFeaturedProjects() {
