@@ -25,13 +25,12 @@ const caseVisual = (project) => `
     <p class="visual-caption">${project.imageLabel || "Selected project preview"}</p>
   </div>
 `;
-`;
 
 function renderFeaturedProjects() {
   const root = $('#featured-projects');
   if (!root || !window.featuredProjects) return;
 
-  root.innerHTML = featuredProjects.map((project, index) => `
+  root.innerHTML = window.featuredProjects.map((project, index) => `
     <article class="case-card reveal" style="z-index:${index + 1}">
       <div class="case-copy">
         <div>
@@ -56,19 +55,32 @@ function renderArchive() {
   const archiveGrid = $('#archiveGrid');
   if (!filterBar || !archiveGrid || !window.archiveItems) return;
 
-  const categories = ['All', ...new Set(archiveItems.map(item => item.category))];
-  filterBar.innerHTML = categories.map(category => `<button type="button" data-filter="${category}" class="${category === 'All' ? 'is-active' : ''}">${category}</button>`).join('');
+  const categories = ['All', ...new Set(window.archiveItems.map(item => item.category))];
+
+  filterBar.innerHTML = categories.map(category => `
+    <button type="button" data-filter="${category}" class="${category === 'All' ? 'is-active' : ''}">
+      ${category}
+    </button>
+  `).join('');
 
   const draw = (filter = 'All') => {
-    const items = filter === 'All' ? archiveItems : archiveItems.filter(item => item.category === filter);
+    const items = filter === 'All'
+      ? window.archiveItems
+      : window.archiveItems.filter(item => item.category === filter);
+
     archiveGrid.innerHTML = items.map(item => `
       <article class="archive-item">
         <div>
-          <div class="archive-thumb" aria-hidden="true"></div>
+          <div class="archive-thumb">
+            ${item.thumb ? `<img src="${item.thumb}" alt="${item.title}" loading="lazy" />` : ""}
+          </div>
           <h3>${item.title}</h3>
           <p>${item.purpose}</p>
         </div>
-        <div class="archive-foot"><span>${item.category}</span><span>${item.tool}</span></div>
+        <div class="archive-foot">
+          <span>${item.category}</span>
+          <span>${item.tool}</span>
+        </div>
       </article>
     `).join('');
   };
@@ -86,7 +98,8 @@ function renderArchive() {
 function renderSkills() {
   const root = $('#skillsGrid');
   if (!root || !window.skills) return;
-  root.innerHTML = Object.entries(skills).map(([group, list]) => `
+
+  root.innerHTML = Object.entries(window.skills).map(([group, list]) => `
     <article class="skill-card">
       <h3>${group}</h3>
       <ul>${list.map(item => `<li>${item}</li>`).join('')}</ul>
@@ -97,12 +110,14 @@ function renderSkills() {
 function renderProjectPage() {
   const root = $('#projectRoot');
   if (!root || !window.featuredProjects) return;
+
   const params = new URLSearchParams(window.location.search);
-  const id = params.get('id') || featuredProjects[0].id;
-  const project = featuredProjects.find(item => item.id === id) || featuredProjects[0];
+  const id = params.get('id') || window.featuredProjects[0].id;
+  const project = window.featuredProjects.find(item => item.id === id) || window.featuredProjects[0];
+
   document.title = `${project.deckTitle} — Ryam Ibrar Portfolio`;
 
-  const otherProjects = featuredProjects.filter(item => item.id !== project.id).slice(0, 3);
+  const otherProjects = window.featuredProjects.filter(item => item.id !== project.id).slice(0, 3);
 
   root.innerHTML = `
     <section class="project-hero section-shell reveal">
@@ -116,9 +131,11 @@ function renderProjectPage() {
         <article><span>Status</span>${project.status}</article>
       </div>
     </section>
+
     <section class="project-showcase section-shell reveal">
       ${caseVisual(project)}
     </section>
+
     <section class="project-content section-shell">
       <aside class="project-toc reveal" aria-label="Case study sections">
         <a href="#context">Context</a>
@@ -128,41 +145,83 @@ function renderProjectPage() {
         <a href="#impact">What Improved</a>
         <a href="#reflection">Reflection</a>
       </aside>
+
       <div class="project-article">
-        <article class="project-block reveal" id="context"><h2>Context</h2><p>${project.summary}</p></article>
-        <article class="project-block reveal" id="challenge"><h2>Challenge</h2><p>${project.challenge}</p></article>
-        <article class="project-block reveal" id="process-block"><h2>Design Process</h2><ul>${project.process.map(step => `<li>${step}</li>`).join('')}</ul></article>
-        <article class="project-block reveal" id="solution"><h2>Design Solution</h2><p>${project.solution}</p></article>
-        <article class="project-block reveal" id="impact"><h2>What I Improved</h2><p>${project.impact}</p><ul>${project.improvements.map(item => `<li>${item}</li>`).join('')}</ul></article>
-        <article class="project-block reveal" id="reflection"><h2>Reflection</h2><p>${project.reflection}</p></article>
+        <article class="project-block reveal" id="context">
+          <h2>Context</h2>
+          <p>${project.summary}</p>
+        </article>
+
+        <article class="project-block reveal" id="challenge">
+          <h2>Challenge</h2>
+          <p>${project.challenge}</p>
+        </article>
+
+        <article class="project-block reveal" id="process-block">
+          <h2>Design Process</h2>
+          <ul>${project.process.map(step => `<li>${step}</li>`).join('')}</ul>
+        </article>
+
+        <article class="project-block reveal" id="solution">
+          <h2>Design Solution</h2>
+          <p>${project.solution}</p>
+        </article>
+
+        <article class="project-block reveal" id="impact">
+          <h2>What I Improved</h2>
+          <p>${project.impact}</p>
+          <ul>${project.improvements.map(item => `<li>${item}</li>`).join('')}</ul>
+        </article>
+
+        <article class="project-block reveal" id="reflection">
+          <h2>Reflection</h2>
+          <p>${project.reflection}</p>
+        </article>
       </div>
     </section>
+
     <section class="next-projects section-shell reveal">
       <p class="eyebrow">More Case Studies</p>
       <div class="next-grid">
-        ${otherProjects.map(item => `<a href="project.html?id=${item.id}"><span>${item.eyebrow}</span><strong>${item.deckTitle}</strong></a>`).join('')}
+        ${otherProjects.map(item => `
+          <a href="project.html?id=${item.id}">
+            <span>${item.eyebrow}</span>
+            <strong>${item.deckTitle}</strong>
+          </a>
+        `).join('')}
       </div>
     </section>
   `;
 }
 
 function setupReveal() {
+  const items = $$('.reveal');
+
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) entry.target.classList.add('is-visible');
     });
   }, { threshold: 0.12 });
-  $$('.reveal').forEach(el => observer.observe(el));
+
+  items.forEach(el => observer.observe(el));
 }
 
 function setupMobileMenu() {
   const button = $('.menu-button');
   const nav = $('.mobile-nav');
+
   if (!button || !nav) return;
+
   button.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('is-open');
     button.setAttribute('aria-expanded', String(isOpen));
   });
+
   nav.addEventListener('click', event => {
     if (event.target.matches('a')) {
       nav.classList.remove('is-open');
@@ -174,6 +233,7 @@ function setupMobileMenu() {
 function setupCursorGlow() {
   const glow = $('.cursor-glow');
   if (!glow) return;
+
   window.addEventListener('pointermove', event => {
     glow.style.left = `${event.clientX}px`;
     glow.style.top = `${event.clientY}px`;
@@ -181,7 +241,9 @@ function setupCursorGlow() {
 }
 
 function setupYear() {
-  $$('#year').forEach(el => { el.textContent = new Date().getFullYear(); });
+  $$('#year').forEach(el => {
+    el.textContent = new Date().getFullYear();
+  });
 }
 
 renderFeaturedProjects();
