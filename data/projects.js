@@ -4,6 +4,8 @@ window.featuredProjects = [
     eyebrow: 'UX + Web Design',
     title: 'Archaius Website UX & Marketing Site Redesign',
     deckTitle: 'Website UX & Marketing Site Redesign',
+    image: 'assets/website-laptop-mockup.jpg',
+    imageAlt: 'Archaius website redesign preview showing page layouts and UX structure',
     summary: 'Redesigned structure, hierarchy, and visual direction for a defense technology website so complex product and industry information became easier to explore.',
     role: 'UX strategy, information architecture, wireframes, high-fidelity page concepts, visual hierarchy, responsive planning',
     tools: ['Figma', 'Framer', 'Illustrator', 'SEO analytics'],
